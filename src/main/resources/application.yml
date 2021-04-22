@@ -1,0 +1,12 @@
+spring:
+  mvc:
+    view:
+      suffix: .html
+server:
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: my-cert
+    key-password: password
+  port: 8443
