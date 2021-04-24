@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IbanExtractorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(IbanExtractorApplication.class, args);
+        SpringApplication application = new SpringApplication(IbanExtractorApplication.class);
+        application.setAdditionalProfiles("ssl");
+        application.run(args);
     }
-
 }
+
