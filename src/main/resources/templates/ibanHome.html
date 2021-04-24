@@ -8,8 +8,11 @@
 <body>
 <h3>Welcome to IBAN Extractor Application </h3>
 <form action="#" th:action="@{/extract}" th:object="${input}" method="post">
-    <textarea rows="60" cols="300" id="value" name="value" th:value="*{value}"></textarea>
+    <textarea rows="30" cols="150" id="value" name="value" th:value="*{value}"></textarea>
     <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
 </form>
+<tr th:each="iban : ${ibanDTOList}">
+    <td th:text="${iban.code}"></td>
+</tr>
 </body>
 </html>

@@ -1,5 +1,9 @@
 package by.kozlov.ibatest.ibanextractor.Controllers;
 
+import by.kozlov.ibatest.ibanextractor.Dto.IbanDTO;
+
+import java.util.ArrayList;
+
 import by.kozlov.ibatest.ibanextractor.Entity.Input;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -7,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -19,21 +24,27 @@ public class IbanController {
 
     @GetMapping(value = "/")
     public String showInputForm(Model model) {
+        log.info("Get iban home view requested");
         model.addAttribute("input", new Input());
         return "ibanHome";
     }
 
     @PostMapping(value = "/extract")
-    public String submit(@ModelAttribute("iban") Input input,
-                         BindingResult result, ModelMap model) {
-        if (result.hasErrors()) {
-            return "error";
+    String listOfExtractedIbansAndShowHomeView(@ModelAttribute("iban") Input input, BindingResult result, ModelMap model) {
+
+        List<String> extractedIbansList = extract(input.getValue());
+        List<IbanDTO> ibanDTOList = new ArrayList<>();
+
+        for (String iban : extractedIbansList) {
+            ibanDTOList.add(new IbanDTO(iban));
         }
 
-        List<String> ibanList = extract(input.getValue());
+        log.info("Extracted IBAN-s: " + ibanDTOList);
 
-        model.addAttribute("result", ibanList);
-        return "result";
+        model.addAttribute(ibanDTOList);
+        model.addAttribute("input", input);
+        return "ibanHome";
     }
 }
+
 
