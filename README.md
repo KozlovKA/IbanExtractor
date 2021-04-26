@@ -23,9 +23,9 @@ docker build --build-arg JAR_FILE=build/libs/*.jar -t myorg/myapp .
 docker run -p 443:8443 myorg/myapp 
 ```
 
-###Swagger Documentation
+### Swagger Documentation
 ```sh
-https://localhost:8443/swagger-ui.html#/iban-controller/showInputFormUsingGET
+https://localhost:8080/swagger-ui.html
 ```
 ## Built With
 
