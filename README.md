@@ -22,6 +22,11 @@ Docker:
 docker build --build-arg JAR_FILE=build/libs/*.jar -t myorg/myapp .
 docker run -p 443:8443 myorg/myapp 
 ```
+
+### Swagger Documentation
+```sh
+https://localhost:8080/swagger-ui.html
+```
 ## Built With
 
 * [Spring](https://spring.io/) - The web framework used
