@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.Util;
+package by.kozlov.ibatest.ibanextractor.util;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 
-import static by.kozlov.ibatest.ibanextractor.Util.IbanExtractorUtil.extract;
+import static by.kozlov.ibatest.ibanextractor.util.IbanExtractorUtil.extract;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
