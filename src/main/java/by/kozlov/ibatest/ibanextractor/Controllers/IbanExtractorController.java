@@ -17,9 +17,9 @@ import static by.kozlov.ibatest.ibanextractor.Util.IbanExtractorUtil.extract;
 public class IbanExtractorController {
 
     @PostMapping(value = "/extract")
-    ResponseEntity<List<IbanDTO>> listOfExtractedIbansAndShowHomeView(Input input) {
+    ResponseEntity<List<IbanDTO>> extractedIbansList(Input input) {
 
-        log.info("Requested request to extract IBAN-s from Input model");
+        log.info("Requested request to extract IBAN-s from Input request");
 
         List<String> extractedIbansList = extract(input.getValue());
 
