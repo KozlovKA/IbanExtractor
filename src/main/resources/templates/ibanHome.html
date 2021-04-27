@@ -11,15 +11,14 @@
 <body>
 <div class="container"></div>
 <h3>Welcome to IBAN Extractor Application </h3>
-<form action="#" th:action="@{/extract}" th:object="${input}" method="post">
-    <textarea rows="10" cols="68" id="value" name="value" th:value="*{value}"></textarea>
-    <div class="btn-group-vertical">
-        <input class="btn btn-success" type="submit" value="Submit"/>
-        <input class="btn btn-danger" type="reset" value="Reset"/>
-    </div>
+<form id = "iban-form">
+    <input id="iban-input" name="value" placeholder="Enter text from which you want to extract IBAN">
+    <p><input id="iban-submit" type="submit" value="Extract"/>
 </form>
-<tr th:each="iban : ${ibanDTOList}">
-    <td th:text="${iban.code}"></td>
-</tr>
+
+<div id="iban-extract-result"></div>
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/home.js"></script>
 </html>
