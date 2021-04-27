@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.Dto;
+package by.kozlov.ibatest.ibanextractor.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

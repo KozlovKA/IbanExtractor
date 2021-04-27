@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.HttpsConfig;
+package by.kozlov.ibatest.ibanextractor.config;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

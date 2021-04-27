@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.Entity;
+package by.kozlov.ibatest.ibanextractor.entity;
 
 import lombok.Getter;
 import lombok.Setter;

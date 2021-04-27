@@ -1,7 +1,7 @@
-package by.kozlov.ibatest.ibanextractor.Controllers;
+package by.kozlov.ibatest.ibanextractor.contoller;
 
-import by.kozlov.ibatest.ibanextractor.Dto.IbanDTO;
-import by.kozlov.ibatest.ibanextractor.Entity.Input;
+import by.kozlov.ibatest.ibanextractor.dto.IbanDTO;
+import by.kozlov.ibatest.ibanextractor.entity.Input;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-import static by.kozlov.ibatest.ibanextractor.Util.IbanExtractorUtil.extract;
+import static by.kozlov.ibatest.ibanextractor.util.IbanExtractorUtil.extract;
 
 @RestController
 @Slf4j

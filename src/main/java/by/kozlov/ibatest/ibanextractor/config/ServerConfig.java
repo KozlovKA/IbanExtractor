@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.HttpsConfig;
+package by.kozlov.ibatest.ibanextractor.config;
 
 import org.apache.catalina.connector.Connector;
 import org.springframework.beans.factory.annotation.Value;

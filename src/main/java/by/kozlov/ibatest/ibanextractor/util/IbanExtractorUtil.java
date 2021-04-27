@@ -1,4 +1,4 @@
-package by.kozlov.ibatest.ibanextractor.Util;
+package by.kozlov.ibatest.ibanextractor.util;
 
 import org.springframework.stereotype.Component;
 
