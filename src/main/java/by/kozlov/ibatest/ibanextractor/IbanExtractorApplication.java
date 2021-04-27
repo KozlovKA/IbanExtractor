@@ -38,7 +38,7 @@ public class IbanExtractorApplication {
 
     private ApiInfo apiDetails() {
         return new ApiInfo(
-                "Adress book API",
+                "Address book API",
                 "Sample API for IBAN extractor REST service",
                 "1.0",
                 "Free to use",
