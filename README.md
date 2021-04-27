@@ -7,7 +7,7 @@ To download project:
 git clone https://github.com/KozlovKA/IbanExtractor.git
 ```
 ### Installing
-To install all libraries you need, print in `IbanExtractor` directory:
+To install all libraries you need, print in terminal in `IbanExtractor` directory:
 ```sh
 gradle build
 ```
@@ -19,8 +19,8 @@ open https://localhost:8443/ in browser
 ```
 Docker:
 ```sh
-docker build --build-arg JAR_FILE=build/libs/*.jar -t myorg/myapp .
-docker run -p 443:8443 myorg/myapp 
+docker build -t myorg/myapp .
+docker run -p 8443:8443 myorg/myapp 
 ```
 
 ### Swagger Documentation
